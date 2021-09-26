@@ -39,7 +39,7 @@ class HomePage extends GetView<HomeController> {
           ScenCard(
             text: "Сменить голос",
             color: Colors.blue[50],
-            whatDo: () => {},
+            whatDo: controller.goToVoicePage,
           ),
         ],
       ),
