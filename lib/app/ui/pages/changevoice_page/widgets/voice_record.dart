@@ -8,18 +8,24 @@ class VoiceRecord extends StatelessWidget {
   final ChangeVoiceController c = Get.find();
   final String path;
   final String name;
+  final String audioPath;
   final String description;
+
   VoiceRecord({
     Key? key,
     required this.path,
     required this.name,
+    required this.audioPath,
     required this.description,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => c.changeName(name),
+      onTap: () {
+        c.changeName(name);
+        c.playAudio(audioPath);
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(
             horizontal: defaultPadding, vertical: defaultPadding / 2),

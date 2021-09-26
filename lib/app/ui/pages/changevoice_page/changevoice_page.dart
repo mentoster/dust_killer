@@ -6,7 +6,7 @@ import 'widgets/bottom_record.dart';
 import 'widgets/voice_record.dart';
 
 class ChangeVoicePage extends GetView<ChangeVoiceController> {
-  ChangeVoicePage({Key? key}) : super(key: key);
+  const ChangeVoicePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +15,19 @@ class ChangeVoicePage extends GetView<ChangeVoiceController> {
         path: "assets/images/1.jpg",
         name: "Голос робота убийцы",
         description: "Позвольте своему роботу говорить как он сам хочет",
+        audioPath: "assets/sounds/startMax.wav",
       ),
       VoiceRecord(
         path: "assets/images/1.jpg",
-        name: "Голос Алисы",
+        name: "Голос Алёны",
         description: "Позвольте своему роботу говорить как он сам хочет",
+        audioPath: "assets/sounds/startAlen.mp3",
       ),
       VoiceRecord(
         path: "assets/images/1.jpg",
         name: "Голос Евгения",
         description: "Позвольте своему роботу говорить как он сам хочет",
+        audioPath: "assets/sounds/startEvg.mp3",
       ),
     ];
     return Scaffold(
