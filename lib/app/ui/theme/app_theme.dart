@@ -8,8 +8,20 @@ final ThemeData appThemeData = ThemeData(
   splashColor: Colors.red,
   highlightColor: Colors.red,
   fontFamily: 'Georgia',
-  textTheme: const TextTheme(
+  iconTheme: const IconThemeData(color: Colors.redAccent),
+  textTheme: TextTheme(
     headline1: TextStyle(
-        color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+        color: Colors.black.withOpacity(0.83),
+        fontSize: 24,
+        fontWeight: FontWeight.bold),
+    button: TextStyle(
+      color: Colors.black.withOpacity(0.83),
+      fontSize: 18,
+    ),
+    bodyText1: TextStyle(
+      color: Colors.black.withOpacity(0.83),
+    ),
+    bodyText2: TextStyle(
+        color: Colors.black.withOpacity(0.83), fontWeight: FontWeight.bold),
   ),
 );

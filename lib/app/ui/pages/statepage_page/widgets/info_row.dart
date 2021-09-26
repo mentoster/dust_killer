@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../../../theme/app_paddings.dart';
 
@@ -23,10 +24,9 @@ class Info extends StatelessWidget {
             children: <TextSpan>[
               TextSpan(
                   text: '$title:',
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
+                  style: Theme.of(context).textTheme.bodyText2),
               TextSpan(
-                text: ' $info',
-              )
+                  text: ' $info', style: Theme.of(context).textTheme.bodyText1)
             ],
           ),
         ));

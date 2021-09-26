@@ -3,31 +3,43 @@ import 'package:get/get.dart';
 
 import '../../../controllers/home_controller.dart';
 import '../../global_widgets/title_image.dart';
+import '../../theme/app_paddings.dart';
+import 'widgets/scenario_card.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     List<Widget> menu = [
       const TitleImage(path: "assets/images/1.jpg"),
       GridView.count(
+        childAspectRatio: (1.3 / 1),
         shrinkWrap: true,
         primary: true,
-        padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
+        padding: const EdgeInsets.all(defaultPadding),
+        crossAxisSpacing: defaultPadding,
+        mainAxisSpacing: defaultPadding,
         crossAxisCount: 2,
         children: <Widget>[
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text("He'd have you all unravel at the"),
-            color: Colors.teal[100],
+          ScenCard(
+            text: "Вымыть полы на кухне",
+            color: Colors.red[50],
+            whatDo: () => {},
           ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text('Heed not the rabble'),
-            color: Colors.teal[200],
+          ScenCard(
+            text: "Пойти на зарядку",
+            color: Colors.green[50],
+            whatDo: () => {},
+          ),
+          ScenCard(
+            text: "Мыть коридор",
+            color: Colors.grey[200],
+            whatDo: () => {},
+          ),
+          ScenCard(
+            text: "Сменить голос",
+            color: Colors.blue[50],
+            whatDo: () => {},
           ),
         ],
       ),

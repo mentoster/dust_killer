@@ -7,17 +7,14 @@ import '../home_page/home_page.dart';
 import '../statepage_page/statepage_page.dart';
 
 class DashboardPage extends StatelessWidget {
-  final int startedPage;
   const DashboardPage({
     Key? key,
-    required this.startedPage,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GetBuilder<DashboardController>(
       builder: (c) {
-        c.changeDefaultPage(startedPage);
         return Scaffold(
           body: SafeArea(
             child: IndexedStack(
@@ -30,7 +27,7 @@ class DashboardPage extends StatelessWidget {
           ),
           bottomNavigationBar: BottomNavigationBar(
             unselectedItemColor: Colors.black,
-            selectedItemColor: Colors.redAccent,
+            selectedItemColor: Theme.of(context).iconTheme.color,
             onTap: c.changeTabIndex,
             currentIndex: c.tabIndex,
             showSelectedLabels: false,

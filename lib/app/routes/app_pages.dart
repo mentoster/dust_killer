@@ -10,14 +10,8 @@ class AppPages {
     GetPage(
         name: Routes.initial,
         page: () => const DashboardPage(
-              startedPage: 0,
             ),
         binding: DashboardBinding()),
-    GetPage(
-        name: Routes.detail,
-        page: () => const DashboardPage(
-              startedPage: 1,
-            ),
-        binding: DashboardBinding()),
+
   ];
 }
