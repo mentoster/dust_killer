@@ -1,13 +1,23 @@
 import 'package:get/get.dart';
 
-import '../bindings/home_binding.dart';
-import '../ui/pages/home_page/home_page.dart';
+import '../bindings/dashboard_binding.dart';
+import '../ui/pages/dashboard_page/dashboard_page.dart';
 
 part './app_routes.dart';
 
 class AppPages {
   static final pages = [
     GetPage(
-        name: Routes.initial, page: () => HomePage(), binding: HomeBinding()),
+        name: Routes.initial,
+        page: () => const DashboardPage(
+              startedPage: 0,
+            ),
+        binding: DashboardBinding()),
+    GetPage(
+        name: Routes.detail,
+        page: () => const DashboardPage(
+              startedPage: 1,
+            ),
+        binding: DashboardBinding()),
   ];
 }

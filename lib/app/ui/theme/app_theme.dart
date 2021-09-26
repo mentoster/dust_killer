@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 final ThemeData appThemeData = ThemeData(
-  primaryColor: Colors.purple,
-  accentColor: Colors.purpleAccent,
-  splashColor: Colors.purpleAccent,
-  highlightColor: Colors.purple,
+  colorScheme: ColorScheme.fromSwatch()
+      .copyWith(primary: Colors.redAccent, secondary: Colors.redAccent),
+  appBarTheme: const AppBarTheme(backgroundColor: Colors.redAccent),
+  scaffoldBackgroundColor: Colors.white,
+  splashColor: Colors.red,
+  highlightColor: Colors.red,
   fontFamily: 'Georgia',
-  textTheme: TextTheme(
-    headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+  textTheme: const TextTheme(
+    headline1: TextStyle(
+        color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
   ),
 );

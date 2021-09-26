@@ -9,7 +9,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: Routes.initial,
     theme: appThemeData,
-    defaultTransition: Transition.fade,
+    defaultTransition: Transition.cupertino,
     getPages: AppPages.pages,
   ));
 }
