@@ -20,13 +20,13 @@ class ChangeVoicePage extends GetView<ChangeVoiceController> {
       VoiceRecord(
         path: "assets/images/1.jpg",
         name: "Голос Алёны",
-        description: "Позвольте своему роботу говорить как он сам хочет",
+        description: "Позвольте сделать уборку с заботой",
         audioPath: "assets/sounds/startAlen.mp3",
       ),
       VoiceRecord(
         path: "assets/images/1.jpg",
         name: "Голос Евгения",
-        description: "Позвольте своему роботу говорить как он сам хочет",
+        description: "Позвольте проффесионалу сделать свою работу",
         audioPath: "assets/sounds/startEvg.mp3",
       ),
     ];
